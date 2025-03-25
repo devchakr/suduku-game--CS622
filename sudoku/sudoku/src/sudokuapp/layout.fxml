@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This code explains the layout of our application and defines all the elements present and provides the skeleton for our application -->
+<!-- We have also defined a controller that will provide interactivity to our Application -->
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+
+<!-- Pane is the parent element which contains other elements like Canvas and Buttons as children -->
+
+<Pane prefHeight="720.0" prefWidth="720.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="base_pane" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sudokuapp.Controller">
+   <children>
+   		<!-- The place where we draw our Sudoku grids -->
+   	  <Canvas fx:id="canvas" height="400.0" width="360.0" layoutX="14.0" layoutY="15.0" onMouseClicked="#whenCanvasIsClicked"/>
+   
+   		<!-- These buttons set the difficulty level of our Sudoku game - Easy, Medium, Hard -->
+      <Button fx:id="easy" layoutX="30.0" layoutY="420.0"  prefHeight="20.0" prefWidth="80.0" text="Easy"  mnemonicParsing="false" onMouseClicked="#resetAsEasy"/>
+      <Button fx:id="medium" layoutX="150.0" layoutY="420.0"  prefHeight="20.0" prefWidth="80.0" text="Medium" mnemonicParsing="false" onMouseClicked="#resetAsMedium"/>
+      <Button fx:id="hard" layoutX="270.0" layoutY="420.0"  prefHeight="20.0" prefWidth="80.0" text="Hard"  mnemonicParsing="false" onMouseClicked="#resetAsHard"/>
+     
+     	<!-- These buttons will be used for input to our Sudoku game -->
+      <Button fx:id="one" layoutX="135.0" layoutY="478.0"  prefHeight="30.0" prefWidth="30.0" text="1" mnemonicParsing="false" onMouseClicked="#whenOneIsPressed"/>
+      <Button fx:id="two" layoutX="175.0" layoutY="478.0"  prefHeight="30.0" prefWidth="30.0" text="2"  mnemonicParsing="false" onMouseClicked="#whenTwoIsPressed"/>
+      <Button fx:id="three" layoutX="215.0" layoutY="478.0" prefHeight="30.0" prefWidth="30.0" text="3" mnemonicParsing="false" onMouseClicked="#whenThreeIsPressed"/>
+      <Button fx:id="four" layoutX="135.0" layoutY="517.0" prefHeight="30.0" prefWidth="30.0" text="4"  mnemonicParsing="false" onMouseClicked="#whenFourIsPressed"/>
+      <Button fx:id="five" layoutX="175.0" layoutY="517.0" prefHeight="30.0" prefWidth="30.0" text="5" mnemonicParsing="false" onMouseClicked="#whenFiveIsPressed"/>
+      <Button fx:id="six" layoutX="215.0" layoutY="517.0"  prefHeight="30.0" prefWidth="30.0" text="6"  mnemonicParsing="false" onMouseClicked="#whenSixIsPressed"/>
+      <Button fx:id="seven" layoutX="135.0" layoutY="556.0" prefHeight="30.0" prefWidth="30.0" text="7" mnemonicParsing="false" onMouseClicked="#whenSevenIsPressed"/>
+      <Button fx:id="eight" layoutX="175.0" layoutY="556.0" prefHeight="30.0" prefWidth="30.0" text="8"  mnemonicParsing="false" onMouseClicked="#whenEightIsPressed"/>
+      <Button fx:id="nine" layoutX="215.0" layoutY="556.0"  prefHeight="30.0" prefWidth="30.0" text="9"  mnemonicParsing="false" onMouseClicked="#whenNineIsPressed"/>
+      
+        <!-- This Reset button will generate a new Sudoku game pattern -->
+      <Button fx:id="reset" layoutX="155.0" layoutY="610.0" mnemonicParsing="false" onMouseClicked="#reset" prefHeight="20.0" prefWidth="80.0" text="Reset" />
+   </children>
+</Pane>

@@ -1,0 +1,25 @@
+/* This CSS(Cascading Style Sheets) file provides design to the elements like button and canvas */
+/* The color palette is inspired from Uber, hence using Black, White and Gray */
+
+.base_pane { 
+	
+	/*This class selector base-pane will change the BG colour of the base pane to black*/
+	/*and the hex code for the color is given */
+	 -fx-background-color: #000000;
+
+}
+
+.button { 
+
+	/*This class selector button will change the BG colour of the base pane to white*/
+	/*and the hex code for the color is given */
+	 -fx-background-color: #FFFFFF;
+
+}
+
+.button:hover { 
+	
+	/*This is the animation/effects for the case when we will hover over the buttons using cursor*/
+	 -fx-background-color: -fx-body-color, -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border;
+
+}
